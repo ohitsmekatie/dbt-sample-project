@@ -38,7 +38,9 @@
 **Expand to see the full raw (as it came from the source) dataset**
 
 <details>
-```[{
+
+```
+[{
   "visitorId": null,
   "visitNumber": "1",
   "visitId": "1501591568",
@@ -214,5 +216,6 @@
   "channelGrouping": "Organic Search",
   "socialEngagementType": "Not Socially Engaged"
 }]
+
 ```
 </details>
