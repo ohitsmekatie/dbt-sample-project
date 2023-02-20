@@ -35,7 +35,7 @@
 
 > Transactional data: information about the transactions that occur on the Google Merchandise Store website
 
-**Expand to see the full raw (as it came from the source) dataset**
+**Expand below to see the full raw (as it came from the source) dataset**
 
 <details>
 
@@ -222,7 +222,7 @@
 
 :point_right: In the google analytics dataset the cleaning for the `all_sessions` model involved casting strings to dates, accessing singular fields within multi-nested arrays, replacing characters in URLs, trimming characters on fields as well as just renaming many of the fields to follow a consistent naming and formatting structure.
 
-Expand to see the schema for the cleaned up version of the above raw dataset.
+**Expand below to see the schema for the cleaned up version of the above raw dataset.**
 
 <details>
 
