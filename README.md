@@ -1,6 +1,8 @@
 # dbt sample project
 
-:wave: The following is a sample project to showcase setting up dbt - using dbt core - and BigQuery. The aim of this project is to showcase familiarity with dbt, data modeling, and custom configurations using publicly available data from BigQuery.
+## Overview
+
+:wave: The following is a sample project to showcase setting up dbt - using dbt Core not Cloud - and BigQuery. The aim of this project is to showcase familiarity with dbt, data modeling, and custom configurations using publicly available data from BigQuery and not necessarily SQL complexity.
 
 ## Project setup
 
@@ -297,12 +299,12 @@
 
 ### Google Analytics
 
-1. `daily_site_metrics`: a rollup of core daily metrics like number of pageviews, number of new visitors, number of bounces, etc.
+1. `daily_site_metrics`: a rollup of core daily metrics like number of pageviews, number of new visitors, number of bounces, etc. [model](https://github.com/ohitsmekatie/dbt-sample-project/blob/main/models/marts/daily_site_metrics.sql)
 
 > **Note**
 > the public dataset actually only spans one day so it's not super compelling to query in this form, but this could produce a nice rollup for a Marketing team to be able to self-serve key metrics by day
 
-2. `daily_campaign_metrics`: a rollup of campaign metrics from site visitors like number of visitors by source and medium
+2. `daily_campaign_metrics`: a rollup of campaign metrics from site visitors like number of visitors by source and medium. [model](https://github.com/ohitsmekatie/dbt-sample-project/blob/main/models/marts/daily_campaign_metrics.sql)
 
 > **Note**
 > again, public dataset actually only spans one day. :) this type of rollup is something i've actually done in my day to day for our demand gen team. In a work scenario we also layer in ad metrics, and sales pipeline metrics to be able to get the whole view of how a campaign has done.
