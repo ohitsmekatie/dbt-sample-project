@@ -308,3 +308,5 @@
 
 > **Note**
 > again, public dataset actually only spans one day. :) this type of rollup is something i've actually done in my day to day for our demand gen team. In a work scenario we also layer in ad metrics, and sales pipeline metrics to be able to get the whole view of how a campaign has done.
+
+<img width="353" alt="Screen Shot 2023-02-20 at 6 56 09 PM" src="https://user-images.githubusercontent.com/9855295/220214849-41dad6b6-5d49-409c-a45f-2b42cae78bfc.png">
