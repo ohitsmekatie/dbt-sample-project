@@ -22,3 +22,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   dbt_sample_project:
+    staging:
+      +schema: staging
+    marts:
+      +schema: production
