@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: daily_metrics
+    description: a rollup of core company metrics by day which can be filtered in a weekly or monthly basis in the BI tool
+    columns:
+      - name: visit_date
+        description: the date of the user's visit to the website
+        tests:
+          - not_null
+
+      - name: num_pageviews
+        description: the total number of page views for the day
+
+      - name: num_total_visits
+        description: the total number of visits for the day (= pageviews normally)
+
+      - name: num_new_visits
+        description: out of the total visits how many were new users
+
+      - name: num_bounces
+        description: number of bounces. a bounce is a user that has < 1 second session
+
+      - name: num_transactions
+        description: the total number of transactions for that day
+
+      - name: avg_time_on_screen
+        description: the average time on screen per use for that day
