@@ -1,8 +1,8 @@
-## dbt sample project
+# dbt sample project
 
 :wave: The following is a sample project to showcase setting up dbt - using dbt core - and BigQuery. The aim of this project is to showcase familiarity with dbt, data modeling, and custom configurations using publicly available data from BigQuery.
 
-### Project setup
+## Project setup
 
 1. Install dbt Core & BigQuery adapter using Homebrew & pip. I have experience with the dbt IDE / cloud product as well but for personal or non-work projects i'd prefer to use dbt Core
 2. Create a new BigQuery project (`dbt-test-375016`)
@@ -10,7 +10,7 @@
 4. Create a `profile.yml` file in the `.dbt` folder and add configurations for data warehouse
 5. :tada: run `dbt debug` to make sure connection worked (it did :D)
 
-### Setting up project scaffolding
+## Setting up project scaffolding
 
 1. Create `staging` folder & `marts` folder for basic project setup. Staging will be my transformed source data and marts will be my "final product" models
 2. Use custom macro to drop the default behavior in dbt that prefaces your user name (dbt_ksipos in this case) to your dataset (`generate_schema_name`)
@@ -19,16 +19,14 @@
 5. Create the same `models` file but in `marts` so I can document and test things at the mart level, if needed
 6. added a `packages.yml` file so that I could install the `dbt utils` package which has[a lot of handy pre-built macros](https://hub.getdbt.com/dbt-labs/dbt_utils/latest/) that can be reasily referenced & reused
 
-### Adding sources & cleaning up the data
+## Adding sources & cleaning up the data
 
 1. For each public dataset transformed in this project i've added the sources in the source yaml file
 2. In the staging models i've done basic transformations, casting, and renaming. See specific files for documentation
 
-:point_right: In the google analytics dataset the cleaning for the `all_sessions` model involved casting strings to dates, accessing singular fields within multi-nested arrays, replacing characters in URLs, trimming characters on fields as well as just renaming many of the fields to follow a consistent naming and formatting structure.
+## Public data transformed in this project
 
-### Public data transformed in this project
-
-1. [Google Analytics sample dataset](https://support.google.com/analytics/answer/7586738#zippy=%2Cin-this-article). This dataset
+### [Google Analytics sample dataset](https://support.google.com/analytics/answer/7586738#zippy=%2Cin-this-article). This dataset
 > The sample dataset contains obfuscated Google Analytics 360 data from the Google Merchandise Store, a real ecommerce store. The Google Merchandise Store sells Google branded merchandise. The data is typical of what you would see for an ecommerce website. It includes the following kinds of information:
 
 > Traffic source data: information about where website visitors originate. This includes data about organic traffic, paid search traffic, display traffic, etc.
@@ -220,4 +218,77 @@
 }]
 
 ```
+</details>
+
+:point_right: In the google analytics dataset the cleaning for the `all_sessions` model involved casting strings to dates, accessing singular fields within multi-nested arrays, replacing characters in URLs, trimming characters on fields as well as just renaming many of the fields to follow a consistent naming and formatting structure.
+
+Expand to see the schema for the cleaned up version of the above raw dataset.
+
+<details>
+
+```
+
+[{
+  "visit_number": "1",
+  "visit_id": "1501591568",
+  "visit_date": "2017-08-01",
+  "num_visits": "1",
+  "num_hits": "1",
+  "num_pageviews": "1",
+  "time_on_screen": null,
+  "num_bounces": "1",
+  "num_transactions": null,
+  "transaction_revenue": null,
+  "new_visits": "1",
+  "num_screenviews": null,
+  "num_unique_screenviews": null,
+  "total_transaction_revenue": null,
+  "session_quality_dim": "1",
+  "referral_path": null,
+  "utm_campaign": "not set",
+  "utm_source": "direct",
+  "utm_medium": "none",
+  "keyword": null,
+  "ad_content": null,
+  "campaign_id": null,
+  "ad_group_id": null,
+  "creative_id": null,
+  "page": null,
+  "slot": null,
+  "customer_id": null,
+  "is_video_ad": null,
+  "browser": "Chrome",
+  "operating_system": "Windows",
+  "is_mobile": "false",
+  "device_category": "desktop",
+  "continent": "Europe",
+  "sub_continent": "Southern Europe",
+  "hit_number": "1",
+  "hit_time": "0",
+  "hit_hour": "5",
+  "hit_minute": "46",
+  "time": "5:46",
+  "is_secure": null,
+  "is_entrance": "true",
+  "is_exit": "true",
+  "referer": "https://www.google.gr/",
+  "page_path": "/google-redesign/bags/google-zipper-front-sports-bag.axd",
+  "host_name": "shop.googlemerchandisestore.com",
+  "search_keyword": null,
+  "search_category": null,
+  "page_path_level_1": "/google-redesign/",
+  "page_path_level_2": "/bags/",
+  "page_path_level_3": "/google-zipper-front-sports-bag.axd",
+  "page_path_level_4": "",
+  "full_visitor_id": "3418334011779872055",
+  "user_id": null,
+  "client_id": null,
+  "channel_grouping": "Organic Search",
+  "social_engagement_type": "Not Socially Engaged",
+  "custom_metrics_index": null,
+  "custom_metrics_value": null
+}]
+
+```
+
 </details>
