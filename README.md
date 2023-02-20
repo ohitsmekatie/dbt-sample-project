@@ -292,3 +292,17 @@
 ```
 
 </details>
+
+## Production data
+
+### Google Analytics
+
+1. `daily_site_metrics`: a rollup of core daily metrics like number of pageviews, number of new visitors, number of bounces, etc.
+
+> **Note**
+> the public dataset actually only spans one day so it's not super compelling to query in this form, but this could produce a nice rollup for a Marketing team to be able to self-serve key metrics by day
+
+2. `daily_campaign_metrics`: a rollup of campaign metrics from site visitors like number of visitors by source and medium
+
+> **Note**
+> again, public dataset actually only spans one day. :) this type of rollup is something i've actually done in my day to day for our demand gen team. In a work scenario we also layer in ad metrics, and sales pipeline metrics to be able to get the whole view of how a campaign has done.
