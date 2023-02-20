@@ -24,6 +24,8 @@
 1. For each public dataset transformed in this project i've added the sources in the source yaml file
 2. In the staging models i've done basic transformations, casting, and renaming. See specific files for documentation
 
+:point_right: In the google analytics dataset the cleaning for the `all_sessions` model involved casting strings to dates, accessing singular fields within multi-nested arrays, replacing characters in URLs, trimming characters on fields as well as just renaming many of the fields to follow a consistent naming and formatting structure.
+
 ### Public data transformed in this project
 
 1. [Google Analytics sample dataset](https://support.google.com/analytics/answer/7586738#zippy=%2Cin-this-article). This dataset
