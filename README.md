@@ -307,6 +307,9 @@
 2. `daily_campaign_metrics`: a rollup of campaign metrics from site visitors like number of visitors by source and medium. [model](https://github.com/ohitsmekatie/dbt-sample-project/blob/main/models/marts/daily_campaign_metrics.sql)
 
 > **Note**
-> again, public dataset actually only spans one day. :) this type of rollup is something i've actually done in my day to day for our demand gen team. In a work scenario we also layer in ad metrics, and sales pipeline metrics to be able to get the whole view of how a campaign has done.
+> again, public dataset actually only spans one day. :) this type of rollup is something i've actually done in my day to day for our demand gen team. In a work scenario we also layer in ad metrics, and sales pipeline metrics to be able to get the whole view of how a campaign has done
 
-<img width="353" alt="Screen Shot 2023-02-20 at 6 56 09 PM" src="https://user-images.githubusercontent.com/9855295/220214849-41dad6b6-5d49-409c-a45f-2b42cae78bfc.png">
+3. `daily_top_paths`: a rollup to show the top 5 common paths per day that visitors take across the ecommerce site.
+
+> **Note**
+> again, again public dataset actually only spans one day. :) if i had other data to ennrich this, like sign up events, i would probably calculate something more like the top 5 paths that ended in a completed sign up
