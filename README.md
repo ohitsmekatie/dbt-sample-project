@@ -313,3 +313,5 @@
 
 > **Note**
 > again, again public dataset actually only spans one day. :) if i had other data to ennrich this, like sign up events, i would probably calculate something more like the top 5 paths that ended in a completed sign up
+
+<img width="287" alt="Screen Shot 2023-02-20 at 8 43 06 PM" src="https://user-images.githubusercontent.com/9855295/220226396-709f6af3-5530-4a20-9c4a-2a4e18e3cdb2.png">
